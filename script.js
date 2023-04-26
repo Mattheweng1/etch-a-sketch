@@ -34,6 +34,10 @@ function deleteRowsAndItemsAll() {
     })
 }
 
+function addDrawnClass(element) {
+    element.classList.add('drawn');
+}
+
 function createCanvas() {
     dimensions = prompt("How many rows and columns do you want?")
     while (!(dimensions >= 2 && dimensions <= 100)) {
@@ -42,7 +46,13 @@ function createCanvas() {
     deleteRowsAndItemsAll();
     addRows(dimensions);
     addItems(dimensions);
+
+    const canvasItems = Array.from(document.querySelectorAll('.canvasItem'));
+    canvasItems.forEach((canvasItem) => {
+        canvasItem.addEventListener('mouseover', () => addDrawnClass(canvasItem));
+    })
 }
 
-const createCanvasButton = document.getElementById('createCanvas');
-createCanvasButton.addEventListener('click', () => {createCanvas()});
+const buttonCreateCanvas = document.getElementById('createCanvas');
+buttonCreateCanvas.addEventListener('click', () => {createCanvas()});
+

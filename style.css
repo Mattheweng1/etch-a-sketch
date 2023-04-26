@@ -31,5 +31,8 @@ button#createCanvas {
 
 .canvasItem {
     flex: 1;
-    border: 1px solid orange;
+}
+
+.drawn {
+    background-color: black;
 }
