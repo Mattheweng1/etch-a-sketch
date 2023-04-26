@@ -27,9 +27,22 @@ function addItems(items) {
     })
 }
 
-function createCanvas(dimensions) {
+function deleteRowsAndItemsAll() {
+    const canvasRows = Array.from(document.querySelectorAll('.canvasRow'));
+    canvasRows.forEach((canvasRow) => {
+        canvasRow.remove();
+    })
+}
+
+function createCanvas() {
+    dimensions = prompt("How many rows and columns do you want?")
+    while (!(dimensions >= 2 && dimensions <= 100)) {
+        dimensions = prompt("Please choose a number from 2 to 100.")
+    }
+    deleteRowsAndItemsAll();
     addRows(dimensions);
     addItems(dimensions);
 }
 
-createCanvas(16);
+const createCanvasButton = document.getElementById('createCanvas');
+createCanvasButton.addEventListener('click', () => {createCanvas()});
