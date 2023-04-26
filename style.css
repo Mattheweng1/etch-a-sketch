@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button.create-canvas {
+    margin: 16px;
+}
+
+.canvas {
+    width: 800px;
+    height: 800px;
+    outline: 2px solid red;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.canvas-row {
+    display: flex;
+    flex: 1;
+    border: 2px solid blue;
+}
+
+.row-item {
+    flex: 1;
+    border: 1px solid green;
+}
