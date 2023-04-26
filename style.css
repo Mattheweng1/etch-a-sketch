@@ -11,11 +11,11 @@ body {
     flex-direction: column;
 }
 
-button.create-canvas {
+button.createCanvas {
     margin: 16px;
 }
 
-.canvas {
+#canvas {
     width: 800px;
     height: 800px;
     outline: 2px solid red;
@@ -24,13 +24,12 @@ button.create-canvas {
     flex-direction: column;
 }
 
-.canvas-row {
+.canvasRow {
     display: flex;
     flex: 1;
-    border: 2px solid blue;
 }
 
-.row-item {
+.canvasItem {
     flex: 1;
-    border: 1px solid green;
+    border: 2px solid orange;
 }
