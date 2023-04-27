@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: gray;
 }
 
 button#createCanvas {
@@ -18,10 +19,11 @@ button#createCanvas {
 #canvas {
     width: 800px;
     height: 800px;
-    outline: 2px solid red;
+    outline: 2px solid black;
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 .canvasRow {
@@ -31,8 +33,5 @@ button#createCanvas {
 
 .canvasItem {
     flex: 1;
-}
-
-.drawn {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
